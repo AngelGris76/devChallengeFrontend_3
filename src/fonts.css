@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Ubuntu Mono';
+  src: url('/assets/fonts/UbuntuMono-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/assets/fonts/NotoSans-Medium.woff') format('woff');
+}
