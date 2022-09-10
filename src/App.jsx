@@ -30,6 +30,9 @@ const App = () => {
           setPage={setPage}
         />
       </main>
+      <footer className={style.footer}>
+        <p>Created by Sebastian Smuraglia</p>
+      </footer>
     </>
   );
 };
