@@ -2,11 +2,13 @@ import Button from './forms/Button';
 import MinusIcon from './icons/MinusIcon';
 import PlusIcon from './icons/PlusIcons';
 
+import style from './StayPagination.module.css';
+
 const StayPagination = ({ page, totalPages, setPage }) => {
   const isFirstPage = page === 1;
   const isLastPage = page === totalPages;
   return (
-    <div>
+    <div className={style.paginationContainer}>
       <Button
         size='sm'
         borderLess
