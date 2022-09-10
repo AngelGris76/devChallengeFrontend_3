@@ -1,0 +1,45 @@
+.stayCard {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.stayDetail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.superHost {
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+
+.stayCardPhotoContainer {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.stayCardPhoto {
+  display: block;
+  width: 100%;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.ratingIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(235, 87, 87);
+}
