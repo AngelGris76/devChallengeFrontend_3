@@ -7,7 +7,8 @@
 
   background-color: white;
   outline: none;
-  border: none;
+  border: 1px solid rgb(51, 51, 51);
+  border-radius: 0.5rem;
 }
 
 .iconFilled {
@@ -29,4 +30,16 @@
 .onlyIcon {
   background-color: white;
   color: rgb(235, 87, 87);
+}
+
+.smallButton {
+  padding: 0.5rem;
+}
+
+.mediumButton {
+  padding: 1rem;
+}
+
+.borderLess {
+  border: none;
 }
