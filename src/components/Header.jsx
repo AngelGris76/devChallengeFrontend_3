@@ -1,6 +1,6 @@
 import Button from './forms/Button';
-import Logo from './icons/Logo';
-import Search from './icons/Search';
+import LogoIcon from './icons/LogoIcon';
+import SearchIcon from './icons/SearchIcon';
 
 import style from './Header.module.css';
 
@@ -8,21 +8,21 @@ const Header = () => {
   return (
     <>
       <header className={style.header}>
-        <Logo />
+        <LogoIcon />
         <div className={style.buttonsContainer}>
-          <Button text='location' color='filled' />
+          <Button text='location' color='filled' borderLess />
           <span className={style.separator}></span>
-          <Button text='Add guests' color='empty' />
+          <Button text='Add guests' color='empty' borderLess />
           <span className={style.separator}></span>
-          <Button icon={Search} iconWidth='1.1rem' onlyIcon color='onlyIcon' />
+          <Button
+            icon={SearchIcon}
+            iconWidth='1.1rem'
+            onlyIcon
+            color='onlyIcon'
+            borderLess
+          />
         </div>
       </header>
-      <Button
-        icon={Search}
-        text='Search'
-        color='iconFilled'
-        iconWidth='1.1rem'
-      />
     </>
   );
 };
