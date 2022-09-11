@@ -6,7 +6,7 @@
   "extends": [
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommend",
+    "plugin:react-hooks/recommended",
     "standard",
     "prettier"
   ],
