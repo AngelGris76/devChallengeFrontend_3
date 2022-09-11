@@ -1,0 +1,26 @@
+.counterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  padding-left: 1rem;
+}
+
+.counterItem,
+.counterDescription {
+  margin: 0;
+}
+
+.counterDescription {
+  color: gray;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
