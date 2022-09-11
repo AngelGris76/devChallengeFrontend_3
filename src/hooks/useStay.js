@@ -26,9 +26,10 @@ const useStay = () => {
 
   filteredBuildings = filterByGuests(filteredBuildings, stayFilter.guests);
 
-  const totalPages = Math.ceil(filteredBuildings.length / 6);
+  const totalPages = Math.ceil(filteredBuildings.length / 6) || 1;
   const totalStays = filteredBuildings.length;
   const paginatedStays = paginateStay(filteredBuildings, stayFilter.page);
+
   return {
     paginatedStays,
     stayFilter,
