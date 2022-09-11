@@ -17,6 +17,7 @@ const Button = ({
   borderLess,
   kind = 'button',
   text,
+  subText,
   icon: Icon,
   onlyIcon,
   color,
@@ -26,15 +27,19 @@ const Button = ({
   const colorClass = EXTRA_CLASS[color || 'empty'];
   const sizeClass = size ? SIZE_CLASS[size] : '';
   const extraClass = borderLess ? style.borderLess : '';
+  const flexDirection = subText ? style.column : '';
 
   return (
     <button
-      className={`${style.button} ${colorClass} ${extraClass} ${sizeClass}`}
+      className={`${style.button} ${colorClass} ${extraClass} ${sizeClass} ${flexDirection}`}
       type={kind}
       {...props}
     >
       {Icon && <Icon width={iconWidth} />}
-      {!onlyIcon && text}
+      {!onlyIcon && subText && (
+        <span className={style.description}>{subText}</span>
+      )}
+      {!onlyIcon && text && <span>{text}</span>}
     </button>
   );
 };
