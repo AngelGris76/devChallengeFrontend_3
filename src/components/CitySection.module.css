@@ -1,0 +1,9 @@
+.citiesRadioContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-left: 1rem;
+}

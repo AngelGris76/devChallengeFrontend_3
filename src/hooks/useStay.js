@@ -19,7 +19,11 @@ const useStay = () => {
   };
 
   useEffect(() => {
-    fetchingData(setBuildings);
+    const controller = new AbortController();
+    fetchingData(setBuildings, controller.signal);
+    return () => {
+      controller.abort();
+    };
   }, []);
 
   let filteredBuildings = filterByCity(buildings.stays, stayFilter.city);
@@ -63,9 +67,9 @@ const paginateStay = (buildings, page) => {
 
 const URL = '/assets/stays.json';
 
-const fetchingData = async (setBuildings) => {
+const fetchingData = async (setBuildings, signal) => {
   try {
-    const response = await fetch(URL);
+    const response = await fetch(URL, { signal });
     if (!response.ok) throw new Error('Server not respond');
     const data = await response.json();
     setBuildings({ stays: data, error: null });
