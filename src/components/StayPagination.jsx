@@ -12,6 +12,7 @@ const StayPagination = ({ page, totalPages, setPage }) => {
       <Button
         size='sm'
         borderLess
+        onlyIcon
         color='iconFilled'
         icon={MinusIcon}
         disabled={isFirstPage}
@@ -25,6 +26,7 @@ const StayPagination = ({ page, totalPages, setPage }) => {
       <Button
         size='sm'
         borderLess
+        onlyIcon
         color='iconFilled'
         icon={PlusIcon}
         disabled={isLastPage}

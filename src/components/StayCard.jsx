@@ -11,7 +11,7 @@ const StayCard = ({ superHost, title, type, beds, rating, photo }) => {
         {superHost && beds && <span>beds {beds}</span>}
         <span className={style.rating}>
           <span className={style.ratingIcon}>
-            <StarIcon width='1rem' />
+            <StarIcon width='1.5rem' />
           </span>
           {rating}
         </span>
