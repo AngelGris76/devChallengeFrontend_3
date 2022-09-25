@@ -2,12 +2,23 @@
   width: 95%;
   max-width: 1200px;
   margin-inline: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.title h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.title span {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 .staysCardContainer {

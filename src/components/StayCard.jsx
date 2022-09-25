@@ -4,7 +4,7 @@ import style from './StayCard.module.css';
 const StayCard = ({ superHost, title, type, beds, rating, photo }) => {
   return (
     <article className={style.stayCard}>
-      <h2>{title}</h2>
+      <h2 className={style.title}>{title}</h2>
       <p className={style.stayDetail}>
         {superHost && <span className={style.superHost}>super host</span>}
         <span>{type}.</span>

@@ -6,17 +6,26 @@
   gap: 0.5rem;
 }
 
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .stayDetail {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  font-weight: 500;
 }
 
 .superHost {
   padding: 0.5rem;
   border: 1px solid black;
   border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .stayCardPhotoContainer {
