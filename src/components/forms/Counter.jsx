@@ -19,7 +19,7 @@ const Counter = ({ item, description, value, setter }) => {
             setter(value - 1);
           }}
         />
-        <span>{value}</span>
+        <span className={style.valueIndicator}>{value}</span>
         <Button
           icon={PlusIcon}
           onlyIcon

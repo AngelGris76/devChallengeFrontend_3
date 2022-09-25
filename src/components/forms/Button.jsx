@@ -28,6 +28,7 @@ const Button = ({
   const sizeClass = size ? SIZE_CLASS[size] : '';
   const extraClass = borderLess ? style.borderLess : '';
   const flexDirection = subText ? style.column : '';
+  const iconText = Icon ? style.iconText : '';
 
   return (
     <button
@@ -39,7 +40,9 @@ const Button = ({
       {!onlyIcon && subText && (
         <span className={style.description}>{subText}</span>
       )}
-      {!onlyIcon && text && <span>{text}</span>}
+      {!onlyIcon && text && (
+        <span className={`${style.subDescription} ${iconText}`}>{text}</span>
+      )}
     </button>
   );
 };

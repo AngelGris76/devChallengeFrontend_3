@@ -31,7 +31,6 @@
 
 .column[aria-pressed='true'] {
   border-color: rgb(51, 51, 51);
-  /* outline: rgb(51, 51, 51) solid 1px; */
 }
 
 .iconFilled {
@@ -60,7 +59,18 @@
 }
 
 .description {
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
   font-size: 0.7rem;
+
   text-transform: uppercase;
   color: rgb(51, 51, 51);
+}
+
+.subDescription {
+  font-family: 'Mulish', sans-serif;
+}
+
+.iconText {
+  font-weight: bold;
 }

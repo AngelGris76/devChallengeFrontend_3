@@ -24,6 +24,8 @@
   min-height: 600px;
   margin-inline: auto;
   padding-top: 3rem;
+
+  font-family: 'Mulish', sans-serif;
 }
 
 @media screen and (min-width: 600px) {

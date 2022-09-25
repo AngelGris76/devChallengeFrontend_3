@@ -13,6 +13,11 @@
   margin: 0;
 }
 
+.counterItem,
+.valueIndicator {
+  font-weight: bold;
+}
+
 .counterDescription {
   color: gray;
 }
