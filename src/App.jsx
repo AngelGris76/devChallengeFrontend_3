@@ -7,6 +7,8 @@ import FilterForm from './components/FilterForm';
 
 import style from './App.module.css';
 
+const MAX_STAYS = 12;
+
 const App = () => {
   const [showForm, setShowForm] = useState(false);
   const {
@@ -40,7 +42,9 @@ const App = () => {
         <div className={style.title}>
           <h2>{`Stays in Finland`}</h2>
           {totalStays && (
-            <span>{`${totalStays > 12 ? '12+' : totalStays} stays`}</span>
+            <span>{`${
+              totalStays > MAX_STAYS ? '12+' : totalStays
+            } stays`}</span>
           )}
         </div>
         <div className={style.staysCardContainer}>{renderedStays}</div>

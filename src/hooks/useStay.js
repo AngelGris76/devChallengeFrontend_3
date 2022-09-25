@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import BUILDINGS_INITIAL_VALUE from '../constants/buildingsInitialValue';
 import STAY_FILTER_INITIAL_VALUE from '../constants/stayFilterInitialValue';
 
+const STAYS_PER_PAGE = 6;
+
 const useStay = () => {
   const [buildings, setBuildings] = useState(BUILDINGS_INITIAL_VALUE);
   const [stayFilter, setStayFilter] = useState(STAY_FILTER_INITIAL_VALUE);
@@ -30,7 +32,7 @@ const useStay = () => {
 
   filteredBuildings = filterByGuests(filteredBuildings, stayFilter.guests);
 
-  const totalPages = Math.ceil(filteredBuildings.length / 6) || 1;
+  const totalPages = Math.ceil(filteredBuildings.length / STAYS_PER_PAGE) || 1;
   const totalStays = filteredBuildings.length;
   const paginatedStays = paginateStay(filteredBuildings, stayFilter.page);
 
@@ -60,8 +62,8 @@ const filterByGuests = (buildings, guestsFilter) => {
 };
 
 const paginateStay = (buildings, page) => {
-  const initialIndex = page * 6 - 6;
-  const finalIndex = initialIndex + 6;
+  const initialIndex = page * STAYS_PER_PAGE - STAYS_PER_PAGE;
+  const finalIndex = initialIndex + STAYS_PER_PAGE;
   return buildings.slice(initialIndex, finalIndex);
 };
 
